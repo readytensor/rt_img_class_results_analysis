@@ -2,4 +2,6 @@
 *.pth
 *.joblib
 *.zip
-predictions.csv
+__pycache__
+*.pdf
+*.png
