@@ -31,10 +31,11 @@ def get_test_keys_path(test_keys_dir_path: str) -> Dict[str, str]:
     dataset_paths = [x for x in list_paths(test_keys_dir_path) if os.path.isdir(x)]
     dataset_names = [Path(x).name for x in dataset_paths]
 
-    test_keys_paths = [
-        os.path.join(x, f"{dataset_name}_test_key.csv")
-        for x, dataset_name in zip(dataset_paths, dataset_names)
-    ]
+    test_keys_paths = []
+    for dataset_path in dataset_paths:
+        test_keys_path = [x for x in list_paths(dataset_path) if x.endswith(".csv")][0]
+        test_keys_paths.append(test_keys_path)
+
     return dict(zip(dataset_names, test_keys_paths))
 
 

@@ -81,4 +81,4 @@ def create_confusion_matrix(exclude_models: list = [], exclude_datasets: list = 
 
 
 if __name__ == "__main__":
-    create_confusion_matrix(exclude_datasets=["cub_200_2011"])
+    create_confusion_matrix(exclude_datasets=["CUB-200-2011"])

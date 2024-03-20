@@ -4,9 +4,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from utils import (
     get_models_dir_paths,
-    get_test_keys_path,
-    read_models_predictions,
-    read_test_keys,
     get_dataset_names,
     read_models_loss,
 )
@@ -27,8 +24,8 @@ def save_loss_plot(loss_df: pd.DataFrame, output_folder):
     # plt.plot(loss_df['epoch'], loss_df['Test Accuracy'], linestyle='-.', color='green', label='Test Accuracy')
     # plt.plot(loss_df['epoch'], loss_df['Validation Accuracy'], linestyle='-.', color='red', label='Validation Accuracy')
     plt.title("Training and Validation Loss per epoch")
-    plt.xlabel("epoch")
-    plt.ylabel("Value")
+    plt.xlabel("epoch number")
+    plt.ylabel("cross entropy loss")
     plt.xticks(range(1, num_epochs + 1, 2))  # Set x-axis ticks to be every 2 epochs
     plt.grid(True, which="both", axis="both", linestyle="--", color="#eaeaea")
     plt.legend()
