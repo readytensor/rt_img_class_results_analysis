@@ -64,6 +64,8 @@ def create_confusion_matrix(exclude_models: list = [], exclude_datasets: list = 
             test_keys_path = test_keys_paths[dataset_name]
             test_keys = read_test_keys(test_keys_path)
             predictions_df = read_models_predictions(model_path, dataset_name)
+            if predictions_df is None:
+                continue
             predictions = predictions_df["prediction"]
             labels = test_keys["target"]
             class_names = test_keys["target"].unique()

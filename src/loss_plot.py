@@ -48,6 +48,8 @@ def create_loss_plot(exclude_models: list = [], exclude_datasets: list = []):
                 continue
 
             loss_df = read_models_loss(model_path, dataset_name)
+            if loss_df is None:
+                continue
             save_path = os.path.join(outputs_dir, model_name, dataset_name)
             os.makedirs(save_path, exist_ok=True)
 

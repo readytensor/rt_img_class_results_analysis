@@ -42,6 +42,8 @@ def get_test_keys_path(test_keys_dir_path: str) -> Dict[str, str]:
 def read_models_predictions(model_dir_path: str, dataset_name: str) -> pd.DataFrame:
     """Read predictions from a csv file and return a pandas DataFrame"""
     predictions_path = os.path.join(model_dir_path, dataset_name, "predictions.csv")
+    if not os.path.exists(predictions_path):
+        return None
     predictions = pd.read_csv(predictions_path)
     return predictions
 
@@ -49,6 +51,8 @@ def read_models_predictions(model_dir_path: str, dataset_name: str) -> pd.DataFr
 def read_models_loss(model_dir_path: str, dataset_name: str) -> pd.DataFrame:
     """Read loss from a csv file and return a pandas DataFrame"""
     loss_path = os.path.join(model_dir_path, dataset_name, "loss_history.csv")
+    if not os.path.exists(loss_path):
+        return None
     loss = pd.read_csv(loss_path)
     return loss
 
