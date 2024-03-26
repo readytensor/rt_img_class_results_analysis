@@ -39,9 +39,11 @@ def get_test_keys_path(test_keys_dir_path: str) -> Dict[str, str]:
     return dict(zip(dataset_names, test_keys_paths))
 
 
-def read_models_predictions(model_dir_path: str, dataset_name: str) -> pd.DataFrame:
+def read_models_predictions(
+    model_dir_path: str, dataset_name: str, file_name: str
+) -> pd.DataFrame:
     """Read predictions from a csv file and return a pandas DataFrame"""
-    predictions_path = os.path.join(model_dir_path, dataset_name, "predictions.csv")
+    predictions_path = os.path.join(model_dir_path, dataset_name, file_name)
     if not os.path.exists(predictions_path):
         return None
     predictions = pd.read_csv(predictions_path)
