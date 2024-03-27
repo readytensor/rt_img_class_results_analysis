@@ -43,6 +43,7 @@ def save_confusion_matrix_plot(
         f"{phase}_confusion_matrix_{model_name}.pdf",
     )
     plt.savefig(cm_filename, format="pdf", bbox_inches="tight")
+    plt.close()
     cm_df = pd.DataFrame(cm, index=class_names, columns=class_names)
     cm_csv_filename = os.path.join(output_folder, f"{phase}_confusion_matrix.csv")
     cm_df.to_csv(cm_csv_filename, index_label="True Label", header="Predicted Label")

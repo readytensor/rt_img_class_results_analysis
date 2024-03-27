@@ -33,6 +33,8 @@ def save_loss_plot(loss_df: pd.DataFrame, output_folder):
         os.path.join(output_folder, f"loss_plot.png"), dpi=300
     )  # Save the plot as a PNG file
 
+    plt.close()
+
 
 def create_loss_plot(exclude_models: list = [], exclude_datasets: list = []):
     models_dir_path = paths.MODELS_DIR

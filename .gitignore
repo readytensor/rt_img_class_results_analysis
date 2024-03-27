@@ -7,3 +7,5 @@ __pycache__
 *.png
 test.ipynb
 test.py
+venv/
+.venv/
