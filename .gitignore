@@ -3,7 +3,6 @@
 *.joblib
 *.zip
 __pycache__
-*.pdf
 test.ipynb
 test.py
 venv/
