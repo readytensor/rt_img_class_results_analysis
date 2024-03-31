@@ -52,7 +52,7 @@ def read_models_predictions(
 
 def read_models_loss(model_dir_path: str, dataset_name: str) -> pd.DataFrame:
     """Read loss from a csv file and return a pandas DataFrame"""
-    loss_path = os.path.join(model_dir_path, dataset_name, "loss_history.csv")
+    loss_path = os.path.join(model_dir_path, dataset_name, "loss_history.csv.zip")
     if not os.path.exists(loss_path):
         return None
     loss = pd.read_csv(loss_path)

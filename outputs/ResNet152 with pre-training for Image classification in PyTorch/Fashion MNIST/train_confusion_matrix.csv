@@ -1,0 +1,11 @@
+True Label,Ankle_Boot,Bag,Coat,Dress,Pullover,Sandal,Shirt,Sneaker,Trouser,Tshirt_Top
+Ankle_Boot,5099,0,0,0,0,0,0,1,0,0
+Bag,0,5100,0,0,0,0,0,0,0,0
+Coat,0,0,5091,3,6,0,0,0,0,0
+Dress,0,0,0,5099,1,0,0,0,0,0
+Pullover,0,0,0,3,5094,0,0,0,0,3
+Sandal,0,0,0,0,0,5100,0,0,0,0
+Shirt,0,0,14,3,3,0,5062,0,0,18
+Sneaker,2,0,0,0,0,0,0,5098,0,0
+Trouser,0,0,0,0,0,0,0,0,5100,0
+Tshirt_Top,0,1,0,1,11,0,12,0,0,5075

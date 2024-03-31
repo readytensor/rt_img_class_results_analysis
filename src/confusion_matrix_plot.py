@@ -53,11 +53,11 @@ def create_confusion_matrix(
     exclude_models: list = [], exclude_datasets: list = [], phase="test"
 ):
     if phase == "test":
-        file_name = "predictions.csv"
+        file_name = "predictions.csv.zip"
     elif phase == "train":
-        file_name = "train_predictions.csv"
+        file_name = "train_predictions.csv.zip"
     elif phase == "val":
-        file_name = "validation_predictions.csv"
+        file_name = "validation_predictions.csv.zip"
     models_dir_path = paths.MODELS_DIR
     test_keys_dir_path = paths.TEST_KEYS_DIR
     outputs_dir = paths.OUTPUTS_DIR
