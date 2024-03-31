@@ -4,7 +4,6 @@
 *.zip
 __pycache__
 *.pdf
-*.png
 test.ipynb
 test.py
 venv/
