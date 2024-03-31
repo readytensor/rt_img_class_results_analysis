@@ -65,7 +65,6 @@ def create_confusion_matrix(
     dataset_names = get_dataset_names(test_keys_dir_path)
     models_dir_paths = get_models_dir_paths(models_dir_path)
     test_keys_paths = get_test_keys_path(test_keys_dir_path)
-
     for model_name, model_path in models_dir_paths.items():
         for dataset_name in dataset_names:
             if model_name in exclude_models or dataset_name in exclude_datasets:
@@ -92,7 +91,7 @@ def create_confusion_matrix(
                 model_name=model_name,
                 class_names=class_names,
             )
-            print(f"Confusion matrix for {model_name} and {dataset_name} saved")
+            print(f"{phase} Confusion matrix for {model_name} and {dataset_name} saved")
 
 
 if __name__ == "__main__":

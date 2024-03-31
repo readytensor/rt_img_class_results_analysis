@@ -2,6 +2,7 @@ import os
 import pandas as pd
 from pathlib import Path
 from typing import List, Dict
+from zipfile import ZipFile
 
 
 def list_paths(dir) -> List[str]:
@@ -46,7 +47,10 @@ def read_models_predictions(
     predictions_path = os.path.join(model_dir_path, dataset_name, file_name)
     if not os.path.exists(predictions_path):
         return None
-    predictions = pd.read_csv(predictions_path)
+    if file_name.endswith(".zip"):
+        file_name = file_name.replace(".zip", "")
+    zip_file = ZipFile(predictions_path)
+    predictions = pd.read_csv(zip_file.open(file_name))
     return predictions
 
 
@@ -55,7 +59,8 @@ def read_models_loss(model_dir_path: str, dataset_name: str) -> pd.DataFrame:
     loss_path = os.path.join(model_dir_path, dataset_name, "loss_history.csv.zip")
     if not os.path.exists(loss_path):
         return None
-    loss = pd.read_csv(loss_path)
+    zip_file = ZipFile(loss_path)
+    loss = pd.read_csv(zip_file.open("loss_history.csv"))
     return loss
 
 
