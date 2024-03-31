@@ -22,7 +22,7 @@ The following is the directory structure of the project:
 - Download **`model_artifacts.zip`** and **`predictions.csv`** from the website for the models/datasets you are interested in getting the plots for.
 - Create a folder for the model inside the **`/inputs`** folder.
 - Inside the model folder create folders for each dataset to process. 
-- Place the files **`loss_history.csv.zip`**, **`predictions.csv.zip`**, **`train_predictions.csv.zip`** and **`validation_predictions.csv.zip`** inside the created dataset folder (Not all files have to be provided).
+- Place the files **`loss_history.csv.zip`**, **`predictions.csv.zip`**, **`train_predictions.csv.zip`** and **`validation_predictions.csv.zip`** inside the created dataset folder (Not all files have to be provided). Files should be zipped with a ".zip" extension to reduce repo size. 
 - Run **`run_all.py`** and the outputs will be generated in **`/outputs`** folder.
 
 Users are free to choose the names of the folders they create
