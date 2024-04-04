@@ -7,3 +7,7 @@ test.ipynb
 test.py
 venv/
 .venv/
+
+!inputs/models/*/Vision/
+inputs/models/*/Vision/*
+!inputs/models/*/Vision/*.csv.zip
